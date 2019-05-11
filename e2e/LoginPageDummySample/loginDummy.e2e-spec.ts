@@ -16,6 +16,7 @@ describe('Login Demo Dummy', () => {
         var inboxPage= await login_pagedummy.submit();
         browser.sleep(3000);  
         expect(inboxPage.getCurrentUrl()).toContain('inbox'); 
+        
     });
 
 });
