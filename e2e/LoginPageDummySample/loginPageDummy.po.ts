@@ -10,8 +10,7 @@ export class LoginPageDummy {
 
     async loginToApp(username: string, password: string){
         await this.txtEmail.sendKeys(username);
-        await this.txtPassword.sendKeys(password);
-        browser.sleep(3000);
+        await this.txtPassword.sendKeys(password);       
         
     }
     async submit() : Promise<inboxPage>{

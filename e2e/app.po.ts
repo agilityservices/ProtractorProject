@@ -2,8 +2,6 @@ import { browser, by, element } from 'protractor';
 
 export class AppPage {
 
-  
-
   async getCurrentUrl() {
     return await browser.getCurrentUrl();
   }
@@ -12,19 +10,22 @@ export class AppPage {
     return await browser.getTitle();
   }
   async isdisplayed(locator: any) {
-    return locator.isDisplayed();
+ 
+    return true;
   }
 
-
-   menuclick_verifyHeader= function(){
+  async verifyHeader() {
+    let data: string;
     let Headers = element.all(by.tagName("h2")).first();
-    //element(by.className(classname)).click();    
-    browser.sleep(3000);
-    Headers.getText().then(function (text) {
-    return text;
+    await Headers.getText().then(function (text) {
+      //console.log("Navigated to " + text + " page");          
+      data = text;
     });
-    
+    return data;
   }
+
+
+
 
   // async typeUsername(un: string) {
 
@@ -43,7 +44,15 @@ export class AppPage {
   //   return await submit.click();
   // }
 
+  //async menuclick_verifyHeader(){
+  //   let Headers = element.all(by.tagName("h2")).first();
+  //   //element(by.className(classname)).click();    
+  //   browser.sleep(3000);
+  //   Headers.getText().then(await function (text) {
+  //   return text;
+  //   });
 
+  // }
 
 
 
