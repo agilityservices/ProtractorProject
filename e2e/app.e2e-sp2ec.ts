@@ -1,11 +1,11 @@
-import { AppPage } from './app.po';
+import { BasePageObjects } from './basePageObjects';
 import  { browser,  logging,  element,  by,  protractor  }  from  'protractor';
 
 describe('Login page suite', () => {
-  let page: AppPage;
+  let page: BasePageObjects;
 
   beforeEach(async () => {
-    page = new AppPage();
+    page = new BasePageObjects();
 
     browser.get("http://tr-qa/account/login");
     //await page.login();
