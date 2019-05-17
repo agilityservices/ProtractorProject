@@ -25,7 +25,9 @@
     "log4js": "^4.1.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "protractor-beautiful-reporter": "^1.2.1",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.9",
@@ -50,5 +52,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "^3.2.4"
+    
   }
 }

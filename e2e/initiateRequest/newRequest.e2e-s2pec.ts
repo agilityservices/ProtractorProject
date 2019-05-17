@@ -1,6 +1,6 @@
-import { LoginPage } from "../LoginPage/LoginPage.po";
 import { newRequestPage } from './newRequestPage.po';
 import { browser, element, by } from 'protractor';
+import { LoginPage } from '../LoginPage/loginPage';
 
 describe('Protractor Demo App', () => {
 
@@ -18,8 +18,8 @@ describe('Protractor Demo App', () => {
     });
 
     it('verify Sql injection testing process:Initiate request', async function () {
-        await loginPage.loginToApp("gmaddirala@agility.com", "Microeforms@1");
-        await loginPage.Signin_Button.click();
+      //  await loginPage.loginToApp("gmaddirala@agility.com", "Microeforms@1");
+       // await loginPage.Signin_Button.click();
         browser.sleep(3000);
         
         await newrequestpage.newrequestIcon.click();
@@ -43,7 +43,7 @@ describe('Protractor Demo App', () => {
         expect(data).toContain('Reddy Aleti');
     });
     xit('verify Sql injection testing process:Submit to Line manager', async function () {
-        await loginPage.loginToApp("raleti@agility.com", "Microeforms@1");
+       // await loginPage.loginToApp("raleti@agility.com", "Microeforms@1");
         browser.sleep(3000);
         //console.log(newrequestpage.returnAllFormcodes());
         // await newrequestpage.allformCodeIDs.getText().then(async function (data: any) {
@@ -65,7 +65,7 @@ describe('Protractor Demo App', () => {
 
     });
     afterEach(async () => {
-       // loginPage.logout();
+      //  loginPage.logout();
     });
 
 });
