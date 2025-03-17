@@ -16,7 +16,7 @@ describe('Transfora Login Functionality', () => {
 
     it('Should login to application', async function () {
         // user enters username
-        await loginPage.enterUsername("gmaddirala@agility.com");
+        await loginPage.enterUsername("gmaddirala@gmail.com");
 
         // user enters password
         await loginPage.enterPassword("Microeforms@1");
